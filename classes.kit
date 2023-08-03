@@ -1,0 +1,105 @@
+class House{
+    var location:String = " "
+    var type:String = "" 
+// Any function in the class can be used to execute code in that class
+    fun getLength(){
+        print("The location is $location an the house is a $type")
+    }
+}
+
+
+fun main() {
+   val a = House()
+       a.location = "Makerere"
+        a.type = "Flat"
+    
+    a.getLength()    
+    
+    
+}
+
+
+          // primary constructor
+          // the constructor is close to the class 
+          // 
+          // 
+class car(var horsePower:String){
+    
+    fun getPower(){
+        println("The power is $horsePower")
+    }
+    
+}		
+class food(var foodType:String){
+    
+	fun getFood(){
+    	println("$foodType is the best")
+    }
+}
+
+// // what we call a parameter under functions e.g fun food(foods:string) is
+// //  called a constructor in classes e.g class(food:string)
+
+fun main(){
+    var car1 = car("780")
+    car1.getPower()
+    
+    var foods = food("Rice")
+    foods.getFood()
+    
+}
+
+
+//secondary constructor
+//the constructor is far from the class
+// (this helps me access elements from class)
+
+
+class books{
+    
+    var t:String = ""
+    var n:String = ""
+    constructor(Title:String,Name:String){
+    this.t = Title
+    this.n = Name
+    }
+    
+    fun science(){
+        print("My name is $n and i love a book called $t")
+    }
+    
+}
+
+fun main(){
+    var book1 = books("Science of things","Jjombwe Nathan")
+    book1.science()
+}
+
+
+// OOP 
+
+//ENCAPISULATION
+
+// open allows inheritance
+open class lesson{
+    private var time:Long = 1000 // cannot be accessed, connot be inherited
+   open public var hour:String =  "" // can be available, can be inherited
+   open protected var minutes = "" // can not be accessed, can be inherited
+    
+}
+
+// child class
+class university:lesson{
+    
+}
+
+fun main(){
+    var les1 = lesson()
+    les1.time = 2000
+    les1.hour = "two"
+    les1.minutes = "three"
+    
+    var uni = university()
+    uni.hour()
+    
+}
